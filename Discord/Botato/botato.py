@@ -25,9 +25,12 @@ async def totodile(ctx):
 @bot.command(pass_context=True)
 async def restart(ctx):
     if ctx.message.author.id.startswith('160847568488628225'):
-        await bot.say('The Brotatoes are Restarting the Bot..')
+        await bot.say("Brotato didn't get the shiny totodile, restarting")
         os.execv(sys.executable, ['python'] + sys.argv)
     else:
         await bot.say("The Brotatoes don't like that you ate there Uncle Fry")
+@bot.command(pass_context=True)
+async def remind(ctx):
+    bot.say("I thought everybody heard the birds the word bird bird bird the birds the word")
 
 bot.run("NDM3MDcxMzMyNzE5NzIyNTA2.Dbwvpg.VsQ-VvWx88SdYwGehzPgKprDoWY")
