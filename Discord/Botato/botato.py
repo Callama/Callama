@@ -29,8 +29,17 @@ async def restart(ctx):
         os.execv(sys.executable, ['python'] + sys.argv)
     else:
         await bot.say("The Brotatoes don't like that you ate there Uncle Fry")
+
 @bot.command(pass_context=True)
 async def remind(ctx):
-    bot.say("I thought everybody heard the birds the word bird bird bird the birds the word")
+    await bot.say("I thought everybody heard the birds the word bird bird bird the birds the word")
+
+@bot.command(pass_context=True)
+async def doctor(ctx):
+    await bot.say("wibbly wobbly timey whimey *grabs Sonic screwdriver* let's go")
+
+@bot.command(pass_context=True)
+async def sans(ctx):
+    await bot.say("heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh h-zzzzzzzzzzzzzz")
 
 bot.run("NDM3MDcxMzMyNzE5NzIyNTA2.Dbwvpg.VsQ-VvWx88SdYwGehzPgKprDoWY")
