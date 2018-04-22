@@ -19,7 +19,7 @@ async def on_ready():
     await bot.change_presence(game=discord.Game(name='Pokemon'))
 @bot.command(pass_context=True)
 async def totodile(ctx):
-    await bot.say("Todiles are totolly tubular")
+    await bot.say("Totodiles are totolly tubular!")
 
 
 @bot.command(pass_context=True)
