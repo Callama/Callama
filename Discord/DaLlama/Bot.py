@@ -40,6 +40,7 @@ async def changelog(ctx):
     embed = discord.Embed(title="DaLlamaBot's Changelog", color=0x00ff00)
     embed.add_field(name="New Commands!",value="l!llama to get a fabulous reply! l!llamas to have allot of llamas! Do l!ping to see if our bot is online. Do l!coin to flip a Coin! Do l!dice to roll a Dice! Do l!ball <message> to use the 8ball!", inline=True)
     await bot.say(embed=embed)
+
 @bot.command(pass_context=True)
 async def help(ctx):
     embed = discord.Embed(title="Need Some Help?", color = 0x00ff00)
@@ -48,7 +49,9 @@ async def help(ctx):
     embed.add_field(name="l!dice",value="Roll a Dice :o",inline=True)
     embed.add_field(name="l!coinflip",value="Fllip a coin",inline=True)
     embed.add_field(name="l!changelog",value="See our Changellog",inline=True)
-    embed.add_field(name="l!ball",value="Roll The Mysticall ball OoOoOoO",inline=True)
+    embed.add_field(name="l!ball",value="Roll The Mysticall Ball Oo",inline=True)
+    embed.set_thumbnail(url="https://image.prntscr.com/image/gdM4vN0UTxu8RBX0Ivodiw.jpg")
+    await bot.say(embed=embed)
 
 @bot.command(pass_context=True)
 async def ping(ctx):
