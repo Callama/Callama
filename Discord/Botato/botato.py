@@ -42,4 +42,15 @@ async def doctor(ctx):
 async def sans(ctx):
     await bot.say("heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh heh h-zzzzzzzzzzzzzz")
 
+
+@bot.command(pass_context=True)
+async def help(ctx):
+    embed = discord.Embed(title="Need some help?", color = 0x00ff00)
+    embed.add_field(name="r!remind",value="The Bird is what?",inline=True)
+    embed.add_field(name="r!doctor",value="Where we going this time?",inline=True)
+    embed.add_field(name="r!sans",value="HEH HEH HEH",inline=True)
+    embed.set_thumbnail(url="https://image.prntscr.com/image/irdvaT_MQcaAAY22qFIpzA.jpg")
+    embed.set_footer(text="Created with Love by @Callama")
+    await bot.say(embed=embed)
+
 bot.run("NDM3MDcxMzMyNzE5NzIyNTA2.Dbwvpg.VsQ-VvWx88SdYwGehzPgKprDoWY")
