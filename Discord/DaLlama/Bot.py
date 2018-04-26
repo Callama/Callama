@@ -132,7 +132,7 @@ async def randomllama(ctx):
 
 
 
-bot.run('NDI4NjcxNjY4OTI0NDQ4NzY4.DaKyWw.l1nOuPdNOKYcY-eLlrPAIc0QC8Y')
+bot.run('')
         
        
 

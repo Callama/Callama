@@ -53,4 +53,4 @@ async def help(ctx):
     embed.set_footer(text="Created with Love by @Callama")
     await bot.say(embed=embed)
 
-bot.run("NDM3MDcxMzMyNzE5NzIyNTA2.Dbwvpg.VsQ-VvWx88SdYwGehzPgKprDoWY")
+bot.run("")
