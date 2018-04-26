@@ -105,6 +105,11 @@ async def shutdown(ctx):
     bot.logout()
 
 
+@bot.command(pass_context=True)
+async def llamagif(ctx):
+    await bot.say("https://cdn.discordapp.com/attachments/428651218093473795/438801901493157919/Callama.gif")
+
+
 
 
 
