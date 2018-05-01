@@ -144,7 +144,7 @@ async def smh(ctx):
 
 
 
-bot.run('NDI4NjcxNjY4OTI0NDQ4NzY4.DclEqA.WZwD-I13S0j_Wgf6jj1LMuy28zk')
+bot.run('NOPE NOT TOAY BEACHES')
         
        
 
