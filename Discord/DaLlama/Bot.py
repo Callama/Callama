@@ -134,6 +134,11 @@ async def randomllama(ctx):
 async def oml(ctx):
     await bot.say("OH MY LLAMA")
 
+@bot.command(pass_context=True)
+async def smh(ctx):
+    await bot.say("SHAKING MAH HEAD")
+
+
             
          
 
