@@ -38,7 +38,7 @@ async def restart(ctx):
 @bot.command(pass_context=True)
 async def changelog(ctx):
     embed = discord.Embed(title="DaLlamaBot's Changelog", color=0x00ff00)
-    embed.add_field(name="New Commands!",value="Added l!oml!", inline=True)
+    embed.add_field(name="New Commands!",value="Added l!oml! Updated l!coinflip, Try it!", inline=True)
     embed.add_field(name="DM Support!",value="Talk to me in Private!", inline=True)
     await bot.say(embed=embed)
 
@@ -52,6 +52,7 @@ async def help(ctx):
     embed.add_field(name="l!changelog",value="See our Changellog",inline=True)
     embed.add_field(name="l!ball",value="Roll The Mysticall Ball Oo",inline=True)
     embed.add_field(name="l!oml", value="Oh My What!?",inline=True)
+    embed.add_field(name="l!smh",value="SHAKING MA HEAD!")
     embed.set_thumbnail(url="https://image.prntscr.com/image/gdM4vN0UTxu8RBX0Ivodiw.jpg")
     await bot.say(embed=embed)
 
@@ -69,11 +70,19 @@ async def drug(ctx):
 
 @bot.command(pass_context=True)
 async def coinflip(ctx):
-    pick = ['Heads', 'Tails']
-    outcome = random.choice(pick)
-    await bot.say("The Llamas are flipping the Coin!")
-    await asyncio.sleep(1)
-    await bot.say("The coin landed on %s!" % (outcome))
+    r=random.randint(1,2)
+    if r == 2:
+        embed = discord.Embed(title="Flipping the Coin..", color=0x00ff00)
+        embed.add_field(name="You landed on Heads!",value="Woo!")
+        embed.set_thumbnail(url="https://image.prntscr.com/image/0aS6YbfpS8ukYOHQ8as4qQ.gif")
+        await bot.say(embed=embed)
+    else:
+        embed = discord.Embed(title="Flipping the Coin..", color=0x00ff00)
+        embed.add_field(name="You landed on Tails!",value="Woo!")
+        embed.set_thumbnail(url="https://image.prntscr.com/image/RJneWQgwRti_Uatoyofk4w.jpg")
+        await bot.say(embed=embed)
+        
+
 
 @bot.command(pass_context=True)
 async def dice(ctx):
@@ -144,7 +153,7 @@ async def smh(ctx):
 
 
 
-bot.run('NOPE NOT TOAY BEACHES')
+bot.run('NDI4NjcxNjY4OTI0NDQ4NzY4.DclEqA.WZwD-I13S0j_Wgf6jj1LMuy28zk')
         
        
 
