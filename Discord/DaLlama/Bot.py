@@ -38,7 +38,8 @@ async def restart(ctx):
 @bot.command(pass_context=True)
 async def changelog(ctx):
     embed = discord.Embed(title="DaLlamaBot's Changelog", color=0x00ff00)
-    embed.add_field(name="New Commands!",value="l!llama to get a fabulous reply! l!llamas to have allot of llamas! Do l!ping to see if our bot is online. Do l!coin to flip a Coin! Do l!dice to roll a Dice! Do l!ball <message> to use the 8ball!", inline=True)
+    embed.add_field(name="New Commands!",value="Added l!oml!", inline=True)
+    embed.add_field(name="DM Support!",value="Talk to me in Private!", inline=True)
     await bot.say(embed=embed)
 
 @bot.command(pass_context=True)
@@ -50,6 +51,7 @@ async def help(ctx):
     embed.add_field(name="l!coinflip",value="Fllip a coin",inline=True)
     embed.add_field(name="l!changelog",value="See our Changellog",inline=True)
     embed.add_field(name="l!ball",value="Roll The Mysticall Ball Oo",inline=True)
+    embed.add_field(name="l!oml", value="Oh My What!?",inline=True)
     embed.set_thumbnail(url="https://image.prntscr.com/image/gdM4vN0UTxu8RBX0Ivodiw.jpg")
     await bot.say(embed=embed)
 
@@ -127,12 +129,17 @@ async def clear(ctx, number):
 @bot.command(pass_context=True)
 async def randomllama(ctx):
     await bot.say("Its ARandomLlama! https://image.prntscr.com/image/iY2_RZkFRCSuZDVKPPUaug.jpg")
+
+@bot.command(pass_context=True)
+async def oml(ctx):
+    await bot.say("OH MY LLAMA")
+
             
          
 
 
 
-bot.run('')
+bot.run('NDI4NjcxNjY4OTI0NDQ4NzY4.DclEqA.WZwD-I13S0j_Wgf6jj1LMuy28zk')
         
        
 
