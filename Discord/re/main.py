@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
 
 
-bot.run("NDQxNzExNDA4NzY2NTE3MjU5.Dc0PUw.VRfkuF_gzXT1pQRTz8hN5hv6sFU")
+bot.run("NOT TODAY BEACHES")
 
 
 
