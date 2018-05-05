@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix = "l!") #Initialise client bot        
+bot = commands.Bot(command_prefix = "tl!") #Initialise client bot        
 
 class llama():
     def __init__(self, bot):
