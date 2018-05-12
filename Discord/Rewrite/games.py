@@ -23,6 +23,24 @@ class games():
             embed.add_field(name="You landed on Tails!",value="Woo!")
             embed.set_thumbnail(url="https://image.prntscr.com/image/RJneWQgwRti_Uatoyofk4w.jpg")
             await self.bot.say(embed=embed)
+
+    @bot.command(pass_context=True)
+    async def dice(self,ctx):
+        r=random.randint(1,6)
+        if r == 1:
+           embed = discord.Embed(title="You got {}!".format(r),color=0x00ff00)
+           embed.set_thumbnail(url="https://image.prntscr.com/image/5JT5lnaJQnqD4mDqzYB6uw.jpg")
+           await self.bot.say(embed=embed)
+
+
+
 def setup(bot):
     bot.add_cog(games(bot))
+
+        
+
+        
+
+
+
     

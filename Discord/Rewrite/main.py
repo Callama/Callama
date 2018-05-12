@@ -9,7 +9,7 @@ import random
 import urllib.request
 import json
 
-startup_extensions = ["games","llama"]
+startup_extensions = ["games","llama","punishments"]
 
 bot = commands.Bot(command_prefix = "tl!") #Initialise client bot
 bot.remove_command('help')
@@ -50,10 +50,13 @@ if __name__ == "__main__":
 async def reload( ctx, extension_name : str):
     """Reloads an extension."""
     if ctx.message.author.id.startswith('160847568488628225'):
-        bot.unload_extension(extension_name)
-        bot.load_extension(extension_name)
-        await bot.say("{} has been reloaded!".format(extension_name))
-        print("{} has been reloaded!".format(extension_name))
+        try:
+            bot.unload_extension(extension_name)
+            bot.load_extension(extension_name)
+            await bot.say("{} has been reloaded!".format(extension_name))
+        except (AttributeError, ImportError) as e:
+            await bot.say("```py\n{}: {}\n```".format(type(e).__name__, str(e)))
+            return
 
             
             
