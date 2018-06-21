@@ -60,8 +60,8 @@ async def refresh(ctx, extension_name:str):
 
 
 
-bot.run('lol oops
-	')
+bot.run('NOT TODAY')
+
 
 
     
