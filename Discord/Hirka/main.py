@@ -60,7 +60,8 @@ async def refresh(ctx, extension_name:str):
 
 
 
-bot.run('NDU2OTc3NzA3MTU1MTkzODY3.DgSZLA.GEzfKv_H9AC2VG6_NDUOzRNTG68')
+bot.run('lol oops
+	')
 
 
     
