@@ -1,5 +1,0 @@
-token = 'NDU2OTc3NzA3MTU1MTkzODY3.Dg2oMw.sxthogAhc6fyOgkRGhO2iXmLm4w'
-genius = 'CzaN0Eianads7pK7AcfJqYLysWVpoi11zsUS42tcoDzHbo0CIlXa2G9hqbeax9py'
-imgurs = '397bc26ffd5216f10df137ca6f19baf8e7b6419a'
-imgurc = 'b1521dd043b41ab'
-giphy = 'N4U1O8rO3sATz3i3Ybmha9uZHf51X4YE'
