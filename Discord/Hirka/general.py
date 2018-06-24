@@ -2,7 +2,8 @@ import discord
 from discord.ext import commands
 import requests
 import pendulum
-
+import asyncio
+import time
 bot = commands.Bot(command_prefix = "!") #Initialise client bot
 bot.remove_command('help')
 
@@ -23,6 +24,7 @@ class general():
         embed = discord.Embed(title=":question: Need some help?", color=0x00ff00)
         embed.add_field(name=';about',value='Who is Hirka?',inline=True)
         embed.add_field(name=";ping",value="Am I here?",inline=True)
+        embed.add_field(name=";coinflip",value="Heads or Tails?",inline=True)
         await self.bot.say(embed=embed)
 
 
@@ -33,6 +35,13 @@ class general():
         embed.add_field(name="Creator",value="Callama")
         await self.bot.say(embed=embed)       
 
+    @bot.command(pass_context=True)
+    async def servers(self,ctx):
+        serverCount = 0
+        for s in self.bot.servers:
+            serverCount = serverCount + 1
+            await self.bot.whisper(serverCount)
+            return s
 
 
 
