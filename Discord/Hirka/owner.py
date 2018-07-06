@@ -1,6 +1,13 @@
 import discord
 from discord.ext import commands
+import ast
+from discord.ext import commands
+import asyncio
+import traceback
 import inspect
+import textwrap
+from contextlib import redirect_stdout
+import io
 
 bot = commands.Bot(command_prefix = "!") #Initialise client bot
 
@@ -42,6 +49,8 @@ class owner():
             except:
                 pass
 
+    
+
     @bot.command(pass_context=True)
     async def shutdown(self,ctx):
         """Shutsdown the bot"""
@@ -51,7 +60,23 @@ class owner():
         else:
             await self.bot.say(":no: You do not have permission to shutdown Hirka.")
 
-   
+    @bot.command(pass_context=True, aliases=['listen', 'watch'])
+    async def play(self,ctx, *, media_title: str):
+        if ctx.message.author.id == '160847568488628225':
+            """Update my presence."""
+            p_types = {'play': 0, 'listen': 2, 'watch': 3}
+            my_media = discord.Game(name=media_title, type=p_types[ctx.invoked_with])
+            await self.bot.change_presence(game=my_media)
+        else:
+            await self.bot.say(":no: You may not use this command.")
+    
+    
+
+
+    
+        
+
+    
     
             
 
