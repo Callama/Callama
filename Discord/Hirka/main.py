@@ -1,11 +1,12 @@
 import discord
-from discord.ext import commands
+from discord.ext import commands 
 import logging
 import sys
 import TOKEN
+import json
 from datetime import datetime
 
-blacklist = []
+
 
 
 description = '''Hirka Bot created by @Callama'''
@@ -13,7 +14,8 @@ bot = commands.Bot(command_prefix=';', description=description)
 bot.remove_command('help')
 
 bot.launch_time = datetime.utcnow()
-
+#Basic Logging
+logging.basicConfig(level=logging.WARNING)
 @bot.event
 async def on_ready():
 	print("Loaded")
@@ -21,14 +23,22 @@ async def on_ready():
 	bot.load_extension('general')
 	bot.load_extension('owner')
 	bot.load_extension('links')
+	bot.load_extension('dbs')
+	bot.load_extension('music')
+
+with open ('data/blacklist.json') as bl:
+	blacklist = json.load(bl)["users"]
+
+
+
+
+
+
+
+
     
    
-@bot.event
-async def on_command_error(ctx,error):
-	error = getattr(error, 'original', error)
-	
-	if isinstance(error, commands.CommandNotFound):
-		return
+
 @bot.command(pass_context=True)
 async def uptime(ctx):
     delta_uptime = datetime.utcnow() - bot.launch_time

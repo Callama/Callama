@@ -35,7 +35,6 @@ class links():
                 gif = [x for x in giphy.search(query)][index]
                 if gif:
                     await self.bot.say(gif)
-            await bot.delete_message(ctx.message)
             return gif
 
         @bot.command(pass_context=True)
@@ -45,36 +44,6 @@ class links():
             condition = location.condition
             await self.bot.say(condition.text)
             return weather 
-
-        @bot.command(pass_context=True)
-        async def lmgtfy(self,ctx,*,search = None):
-            """Search...Stuff I guess"""
-
-            if search == None:
-                await self.bot.say('You need to enter a query!')
-
-            lmgtfyl = "http://lmgtfy.com/?q={}".format(quote(search))
-            lmgtfyt = tiny_url(lmgtfyl)
-            await self.bot.say('You can find your answers here:\n\n<{}>'.format(lmgtfyt))
-            return lmgtfy
-            #WORK ON
-        @bot.command(pass_context=True)
-        async def tinyurl(self,ctx,link : str):
-            tinyurl2 = tiny_url(link)
-            await self.bot.say('Your link is: {}'.format(tinyurl2))
-            
-
-
-
-
-        def tiny_url(url):
-            """Convert Url to Tiny Url and return url"""
-            apiurl = "http://tinyurl.com/api-create.php?url="
-            tinyurl = urlopen(apiurl + url).read().decode("utf-8")
-            return tinyurl
-
-        #End Work On
-        
 
         
 
